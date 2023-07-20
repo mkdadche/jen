@@ -9,11 +9,26 @@ pipeline {
             }
         }
 
-        stage('Build and Test') {
+        stage('Build') {
             steps {
-                // Install Python and run the Flask app
+                // Install Python dependencies
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests for the Flask app
+                sh 'python -m unittest discover tests'
+            }
+        }
+
+        stage('Run Flask App') {
+            steps {
+                // Run the Flask app
                 sh 'python app.py'
             }
         }
     }
 }
+
