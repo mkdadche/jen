@@ -5,11 +5,10 @@ This application is the user interface of the ISO code application
 
 Before running the FrontEndApplication, make sure the following two microservices are up and running:
 
-* [Matched Country service](https://github.com/mkdadche/MatchedCountriesApplication)
-* [DownloadFile](https://github.com/mkdadche/DownloadFileApplication)
+* [Matched Country service application](https://github.com/mkdadche/MatchedCountriesApplication)
+* [DownloadFile application](https://github.com/mkdadche/DownloadFileApplication)
 
 # Steps to run the application
-**Please note that to make the application running we need to make sure the three microservices are running.**
 ## Running without Docker
 **The below steps should be taken with each of the above repository.**
 ### Python
@@ -43,7 +42,7 @@ flask run
 ```
 
 ## Running with Docker
-**execute the below two steps and they should be taken with each of the above repository.**
+**Execute the below two steps and they should be taken with each of the above repository.**
 ### Build the docker image
 ```
 docker build -t frontend-app .
