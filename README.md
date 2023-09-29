@@ -55,7 +55,7 @@ docker run -p 4001:4001 match-app
 
 
 ## Running only the API
-If you would like only to use the API (without running the whole web application), you can run only this microservice and use the API by accessing http://127.0.0.1:4001/apidocs
+If you would like only to use the API (without running the whole web application), you can run only this microservice and use the API by accessing http://127.0.0.1:4001/apidocs as swagger API
 
 ## Running the test
 **Please follow the below steps.**
