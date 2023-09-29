@@ -1,12 +1,12 @@
-# MatchedCountriesApplication
-This application is the used to pull the ISO code of the given countries from the API https://restcountries.com/v3/name/ and return the countries that matching the given ISO code.
+# DownloadFile application
+This application is the used to download the result for the users.
 
 ## Dependencies
 
 To make the applictaion fully running, make sure the following two microservices are up and running:
 
 * [FrontEndApplication](https://github.com/mkdadche/FrontEndApplication)
-* [DownloadFile application](https://github.com/mkdadche/DownloadFileApplication)
+* [MatchedCountriesApplication](https://github.com/mkdadche/MatchedCountriesApplication)
 
 # Steps to run the application
 ## Running without Docker
@@ -50,12 +50,8 @@ docker build -t match-app .
 
 ### Run the container
 ```
-docker run -p 4001:4001 match-app
+docker run -p 4002:4002 match-app
 ```
-
-
-## Running only the API
-If you would like only to use the API (without running the whole web application), you can run only this microservice and use the API by accessing http://127.0.0.1:4001/apidocs as swagger API
 
 ## Running the test
 **Please follow the below steps.**
@@ -67,18 +63,7 @@ If you would like only to use the API (without running the whole web application
 
 | Name         | Stmts | Miss | Cover |
 |--------------|-------|------|-------|
-| model.py     | 40    | 0    | 100%  |
-| test_model.py| 25    | 0    | 100%  |
-| TOTAL        | 65    | 0    | 100%  |
+| model.py     |  6    | 0    | 100%  |
+| test_model.py| 11    | 0    | 100%  |
+| TOTAL        | 17    | 0    | 100%  |
 
-## Caching with cachetools
-
-In this project, we utilize the `cachetools` module to implement caching for improved performance and reduced API calls. Here's how it works:
-
-- We initialize a TTL (Time-to-Live) cache with the following parameters:
-  - Maximum cache size: 100 items
-  - Expiration time: 3600 seconds (1 hour)
-
-- When we need to fetch the ISO code for a country based on its name, we first check if the country name is already present in the cache.
-
-- If the country name is found in the cache, we retrieve the ISO code from the cache, eliminating the need to make an API request to [https://restcountries.com/v3/name/](https://restcountries.com/v3/name/). This optimization helps reduce unnecessary API hits and improves overall system performance.
