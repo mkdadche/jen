@@ -1,5 +1,5 @@
 # DownloadFile application
-This application is the used to download the result for the users.
+This application is used to download the result for the users.
 
 ## Dependencies
 
@@ -13,7 +13,7 @@ To make the applictaion fully running, make sure the following two microservices
 **The below steps should be taken with each of the above repository.**
 ### Python
 
-FrontEndApplication was build and run on Python 3.11.5.
+DownloadFile application was build and run on Python 3.11.5.
 
 * Install [Python](https://www.python.org/downloads/)
 
