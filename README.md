@@ -1,7 +1,10 @@
 # FrontEndApplication
 This application is the user interface of the ISO code application
 
-# other 2 application to make the web application running 
+## Dependencies
+
+Before running the FrontEndApplication, make sure the following two microservices are up and running:
+
 * [Matched Country service](https://github.com/mkdadche/MatchedCountriesApplication)
 * [DownloadFile](https://github.com/mkdadche/DownloadFileApplication)
 
