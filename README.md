@@ -61,6 +61,7 @@ If you would like only to use the API (without running the whole web application
 **Please follow the below steps.**
 * Make sure the virtual enviroment is activated.
 * Run the command `pytest`, you should get all the tests passed.
+
 **for test coverage**
 * After running the command `pytest` run the command `coverage run -m pytest` and then the command `coverage report -m`. then you will get the below table
 
