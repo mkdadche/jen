@@ -14,7 +14,7 @@ Before running the FrontEndApplication, make sure the following two microservice
 **The below steps should be taken with each of the above repository.**
 ### Python
 
-QuickTools currently runs on Python 3.11.5.
+FrontEndApplication was build and run on Python 3.11.5.
 
 * Install [Python](https://www.python.org/downloads/)
 
